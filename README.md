@@ -1,55 +1,72 @@
 ## Daniel Martins
 
-Pesquiso no ICMC-USP. Trabalho com **visão computacional e aprendizado de
-máquina aplicados a acervos e imagens**: modelos que reconhecem, classificam e
-encontram coisas em material que já existe — obras de museu, filmes de arquivo,
-espectros de laboratório, discos. Gosto de entregar isso como ferramenta que
-alguém de fora da computação consegue usar.
+PhD student at ICMC, University of São Paulo. My thesis applies **computer
+vision to the collection of the Museum of Contemporary Art (MAC USP)**: how
+models can relate, describe and help people explore thousands of artworks.
+Outside the thesis I build tools with the same idea — models trained or
+adapted for one specific task, delivered as something a non-programmer can use.
 
 ---
 
-### decupagem — visão computacional para a sala de montagem
-[demo](https://danmartsarr.github.io/decupagem/) · [código](https://github.com/danmartsarr/decupagem)
+### PhD research · MAC USP collection
 
-Recebe um filme bruto e devolve a folha de decupagem: cada plano com timecode,
-escala (detalhe, primeiro plano, médio, geral, cartela), o que é dito nele e uma
-miniatura. Busca planos por descrição, acha planos parecidos e exporta **EDL**
-para o DaVinci Resolve ou o Premiere. Um **servidor MCP** deixa um assistente
-fazer a pesquisa no material conversando.
-CLIP + classificador treinado (0,91 de acurácia contra 0,51 do zero-shot) +
-Whisper, demonstrado em filmes de 1935 e 1937 em domínio público.
+#### Visual similarity map of the collection
+[live site](https://danmartsarr.github.io/mac-mockup/relacoes/) · [repo](https://github.com/danmartsarr/mac-mockup)
+
+A prototype museum website where thousands of artworks are laid out by visual
+similarity (**DINOv3** embeddings), with search by image, colour palettes and
+historical bulletins transcribed with OCR.
+
+![MAC USP collection map](assets/mac-mapa.jpg)
+
+#### Human validation of model tags
+[live site](https://danmartsarr.github.io/validacao-tags-mac/) · [repo](https://github.com/danmartsarr/validacao-tags-mac)
+
+Four reviewers check, artwork by artwork, the tags that DINOv3 (dino.txt)
+assigned to the collection, to measure the model's precision before the tags
+are used anywhere.
+
+---
+
+### Other projects
+
+#### decupagem — computer vision for the editing room
+[demo](https://danmartsarr.github.io/decupagem/) · [repo](https://github.com/danmartsarr/decupagem)
+
+Turns raw footage into a shot log: every shot with timecode, shot scale, what
+is said in it and a thumbnail. Search shots by description, find similar
+shots and export an **EDL** for DaVinci Resolve or Premiere. An **MCP server**
+lets an assistant search the footage in conversation.
+CLIP + a trained shot-scale classifier (0.91 accuracy vs 0.51 zero-shot) +
+Whisper, demonstrated on public-domain films from 1935 and 1937.
 
 ![decupagem](assets/decupagem.jpg)
 
-### Acervo do MAC USP — mapa de semelhança visual
-[site](https://danmartsarr.github.io/mac-mockup/relacoes/) · [validação](https://github.com/danmartsarr/validacao-tags-mac)
+#### Museu Leonilson — digital museum
+[live site](https://danmartsarr.github.io/museu-leonilson/)
 
-Protótipo de site para o Museu de Arte Contemporânea da USP em que milhares de
-obras se organizam por semelhança visual (vetores do **DINOv3**), com busca por
-imagem, paleta de cores e boletins históricos transcritos por OCR. Um segundo
-projeto mede, com quatro validadores, a precisão das etiquetas que o modelo
-atribuiu a cada obra.
+Website for the work of Brazilian artist José Leonilson: collection by decade,
+biography and an interactive canvas. Every image carries the Projeto Leonilson
+watermark, burned into the files themselves.
 
-![Mapa do acervo do MAC USP](assets/mac-mapa.jpg)
+#### cadence — album recommendations that explain themselves
+[demo](https://danmartsarr.github.io/cadence/) · [repo](https://github.com/danmartsarr/cadence)
 
-### cadence — recomendação de discos que explica o porquê
-[demo](https://danmartsarr.github.io/cadence/) · [código](https://github.com/danmartsarr/cadence)
+Flutter app: rate albums and get recommendations with the reason for each one.
+TF-IDF over MusicBrainz tags, Rocchio user profile, MMR diversification and an
+offline evaluation (recall@10 of 0.83 vs 0.015 random).
 
-App em Flutter: você avalia álbuns e recebe recomendações com o motivo de
-cada uma. TF-IDF sobre as tags do MusicBrainz, perfil Rocchio, diversificação
-MMR e uma avaliação offline (recall@10 de 0,83 contra 0,015 do aleatório).
+<img src="assets/cadence.jpg" alt="cadence: why you might like it" width="720">
 
-<img src="assets/cadence.jpg" alt="cadence: por que você pode gostar" width="720">
+#### RAVI — microplastic identification from infrared spectra
+[app](https://danmartsarr.github.io/Sistema/) · [repo](https://github.com/danmartsarr/Sistema)
 
-### RAVI — identificação de microplásticos por infravermelho
-[app](https://danmartsarr.github.io/Sistema/) · [código](https://github.com/danmartsarr/Sistema)
+Neural network that identifies the polymer (EVA, PA, PE, PP, PS, cellulose)
+from an FTIR spectrum and shows, through saliency, which bands drove the
+answer. FastAPI backend and Flutter app.
 
-Rede neural que identifica o polímero (EVA, PA, PE, PP, PS, celulose) a partir
-do espectro FTIR e mostra, por saliência, quais bandas decidiram a resposta.
-API em FastAPI e app em Flutter.
-
-### Também
-- [Remoção de linhas de pauta em partituras manuscritas](https://github.com/danmartsarr/Projeto_Final_SCC0251) — processamento de imagens clássico, avaliado pixel a pixel na base CVC-MUSCIMA.
+#### Also
+- [Staff-line removal in handwritten scores](https://github.com/danmartsarr/Projeto_Final_SCC0251) — classical image processing, evaluated pixel by pixel on CVC-MUSCIMA.
 
 ---
 
