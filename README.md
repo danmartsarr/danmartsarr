@@ -17,7 +17,8 @@ A prototype museum website where thousands of artworks are laid out by visual
 similarity (**DINOv3** embeddings), with search by image, colour palettes and
 historical bulletins transcribed with OCR.
 
-![MAC USP collection map](assets/mac-mapa.jpg)
+![Zoomed-in view of the MAC USP map: drawings of the human figure grouped by DINOv3 visual similarity](assets/mac-mapa.jpg)
+<sub>Zoomed into the map: drawings of the human figure that DINOv3 placed next to each other.</sub>
 
 #### Human validation of model tags
 [live site](https://danmartsarr.github.io/validacao-tags-mac/) · [repo](https://github.com/danmartsarr/validacao-tags-mac)
