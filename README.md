@@ -57,7 +57,7 @@ Flutter app: rate albums and get recommendations with the reason for each one.
 TF-IDF over MusicBrainz tags, Rocchio user profile, MMR diversification and an
 offline evaluation (recall@10 of 0.83 vs 0.015 random).
 
-<img src="assets/cadence.jpg" alt="cadence: why you might like it" width="720">
+<img src="assets/cadence.jpg" alt="cadence: recommendations, each with its reason" width="720">
 
 #### RAVI — microplastic identification from infrared spectra
 [app](https://danmartsarr.github.io/Sistema/) · [repo](https://github.com/danmartsarr/Sistema)
